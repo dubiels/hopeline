@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Quiz</title>
+  <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+<body>
+<div id="quiz">
+  <div id="quiz-header">
+    <h3>ED Screening Tool</h3> 
+    <p><a id="quiz-home-btn"></a></p>
+  </div>
+  <div id="quiz-start-screen">
+    <p>This is based on the official NEDA resource, which can be found here. This can determine if it's time to seek professional help.</p>
+    <button id="quiz-start-btn" class="quiz-button">Start</button>
+    
+    	<h3 id="results-screen">Based on your answers, you may be at risk.</h3>
+    	
+   
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="../dist/jquery.quiz-min.js"></script>
+<script>
+  $('#quiz').quiz({
+    resultsScreen: '#results-screen',
+    //counter: false,
+    //homeButton: '#custom-home',
+    counterFormat: 'Question %current of %total',
+    questions: [
+      {
+        'q': 'How much more or less do you feel you worry about your weight and body shape than other people your age?',
+        'options': [
+          'I worry a lot less than other people',
+          'I worry a little less than other people',
+          'I worry about the same as other people',
+          'I worry a little more than other people',
+          'I worry a lot more than other people'
+        ],
+      },
+    {
+        'q': 'How afraid are you of gaining 3 pounds?',
+        'options': [
+          'Not afraid of gaining',
+          'Slightly afraid of gaining',
+          'Moderately afraid of gaining',
+          'Very afraid of gaining',
+          'Terrified of gaining'
+        ],
+    },
+      {
+        'q': 'When was the last time you went on a diet?',
+        'options': [
+          'I have never been on a diet',
+          'I was on a diet about one year ago',
+          'I was on a diet about 6 months ago',
+          'I was on a diet about 3 months ago',
+          'I was on a diet about 1 month ago',
+          'I am on a diet now'
+        ],
+      },
+           {
+        'q': 'Compared to other things in your life, how important is your weight to you?',
+        'options': [
+          'My weight is not important compared to other things in my life',
+          'My weight is a little more important than some other things in my life',
+          'My weight is more important than most, but not all, things in my life',
+          'My weight is the most important thing in my life',
+        ],
+      },
+         {
+        'q': 'Do you ever feel fat?',
+        'options': [
+          'Never',
+          'Some days',
+          'Most days',
+          'All days',
+        ],
+      },
+        {
+        'q': 'In the past three months, have you used laxatives, exercized excessively, or fasted as a means of weight control?',
+        'options': [
+          'No',
+          'Yes (at least once)',
+        ],
+      },
+         
+         {
+        'q': 'Do you consume a small amount of food (i.e., less than 1200 calories/day) on a regular basis to influence your shape or weight?',
+        'options': [
+          'No',
+          'Yes',
+        ],
+      },
+    	  {
+        'q': 'Are you currently in treatment for an eating disorder?',
+        'options': [
+          'No',
+          'Yes',
+          'Not currently, but I have been in the past'
+        ],
+      },
+
+    ]
+  });
+</script>
+</body>
+</html>
